@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f5f3ff;
+  color: #282344;
+  padding: 40px 16px;
+}
+
+.wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 28px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(50, 35, 100, 0.08);
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #6d4aff;
+}
+
+.subtitle {
+  color: #77718c;
+  margin-bottom: 26px;
+}
+
+.addrow {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #ded9f5;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+#add {
+  background: #7657f6;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.chips button {
+  background: #f0edfc;
+  color: #5e527e;
+}
+
+.chips button.active {
+  background: #7657f6;
+  color: white;
+}
+
+#list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e8e4f5;
+  border-radius: 12px;
+}
+
+.task-title {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: #f0edfc;
+  color: #6d4aff;
+  white-space: nowrap;
+}
+
+.task button {
+  padding: 7px 9px;
+  background: #eee9ff;
+  color: #5941bc;
+  flex-shrink: 0;
+}
+
+.task .delete {
+  background: #fff0f0;
+  color: #c04444;
+}
+
+#empty {
+  text-align: center;
+  color: #89839c;
+  padding: 20px 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .wrap {
+    padding: 20px;
+  }
+
+  .addrow {
+    flex-direction: column;
+  }
+
+  li.task {
+    flex-wrap: wrap;
+  }
+
+  .task-title {
+    flex-basis: 100%;
+  }
+}
